@@ -1,0 +1,16 @@
+# Virtual environments
+flask/
+flask/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Databases
+*.db
+
+# Environment / secrets
+.env
+
+# VS Code settings (optional)
+.vscode/

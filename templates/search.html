@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Search{% endblock title %}
+{% block body %}
+
+<div class="container my-4">
+
+    <h3>Search Results for: "<span class="text-primary">{{ query }}</span>"</h3>
+
+    {% if alltodos|length == 0 %}
+    <div class="alert alert-info mt-3">No results found.</div>
+    {% else %}
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>SNo</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in alltodos %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ todo.title }}</td>
+                <td>{{ todo.desc }}</td>
+                <td>{{ todo.date_created }}</td>
+                <td>
+                    <a href="{{ url_for('update', sno=todo.sno) }}" class="btn btn-outline-dark btn-sm mx-1">Update</a>
+                    <a href="{{ url_for('delete', sno=todo.sno) }}" class="btn btn-outline-dark btn-sm mx-1">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+</div>
+
+{% endblock body %}

@@ -31,7 +31,7 @@ def home():
 
         return redirect(url_for("home"))
     alltodos=Todo.query.all()
-    return render_template('index.html',alltodos=alltodos)
+    return render_template("index.html",alltodos=alltodos)
 
 @app.route("/search")
 def search():

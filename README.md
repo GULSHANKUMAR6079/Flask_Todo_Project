@@ -138,5 +138,5 @@ Now visit:
 ![Home Page](https://drive.google.com/thumbnail?id=1XMLrEH-TnaHtin16HS8_4WT-bF35cLBy&sz=w1000)
 
 ## License
-This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License – see the [LICENSE](./license) file for details.
 
